@@ -1,9 +1,9 @@
-public class outputNode {
+public class OutputNode {
     private String nombre_completo, curso, cedula;  
     private String[][] fullMateria;
 
 
-    public outputNode(String nombre_completo, String curso, String cedula, Float[][] notas, String[] materia, int n_materias) {
+    public OutputNode(String nombre_completo, String curso, String cedula, Float[][] notas, String[] materia, int n_materias) {
         fullMateria  = new String[n_materias][6];
         this.nombre_completo = nombre_completo;
         this.curso = curso;
@@ -23,7 +23,7 @@ public class outputNode {
         }
 
     }
-    public outputNode(String nombre_completo, String curso, String cedula) {
+    public OutputNode(String nombre_completo, String curso, String cedula) {
         this.nombre_completo = nombre_completo;
         this.curso = curso;
         this.cedula = cedula;

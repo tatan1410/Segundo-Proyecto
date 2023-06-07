@@ -64,8 +64,7 @@ public class App {
                 }
 
             } catch (Exception e) {
-                // if(e.getMessage() == "Cannot parse null string") System.exit(0);
-                // System.out.println(e);
+
             }
         }
     }
@@ -81,7 +80,7 @@ public class App {
     }
 
     public static String mostrar_estudiantes(StudentList estudiantes) {
-        outputNode[] est = estudiantes.showAllStudents();
+        OutputNode[] est = estudiantes.showAllStudents();
         String s = "";
         for (int i = 0; i < est.length; i++) {
             s += "Nombre: " + est[i].getNombre_completo() +
@@ -93,7 +92,7 @@ public class App {
     }
 
     public static String mostrar_estudiante_completo(StudentList estudiantes, String cc) {
-        outputNode est = estudiantes.showStudent(cc);
+        OutputNode est = estudiantes.showStudent(cc);
 
         if (est == null) {
             return "Estudiante No Encontrado";

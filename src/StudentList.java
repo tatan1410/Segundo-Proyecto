@@ -1,14 +1,14 @@
 public class StudentList extends Exception {
     private StudentNode start = null;
 
-    public outputNode[] showAllStudents() { // returns a string with the list
+    public OutputNode[] showAllStudents() { // returns a string with the list
         StudentNode p = start;
 
-        outputNode[] vec = new outputNode[this.size()];
+        OutputNode[] vec = new OutputNode[this.size()];
         int i = 0;
         
         while (p != null) {
-            vec[i] = new outputNode(p.getNombre()+" "+p.getApellido(),p.getCarrera(),p.getCedula());
+            vec[i] = new OutputNode(p.getNombre()+" "+p.getApellido(),p.getCarrera(),p.getCedula());
             i++;
             p = p.getNextStudent();
         }
@@ -16,7 +16,7 @@ public class StudentList extends Exception {
         return vec;
     }
 
-    public outputNode showStudent(String cc) {
+    public OutputNode showStudent(String cc) {
         StudentNode p = search_student(cc);
         if (p==null) return null;
 
@@ -28,7 +28,7 @@ public class StudentList extends Exception {
             nombre_materias[j] = p.getMaterias().getNombreMaterias()[j];
             a[j] = p.getMaterias().getPilasNotas()[j].mostrar(); // a = las notas de la pila en posicion j
         }
-        return new outputNode(p.getNombre()+" "+p.getApellido(),p.getCarrera(),p.getCedula(), a, nombre_materias ,p.getMaterias().getNombreMaterias().length);
+        return new OutputNode(p.getNombre()+" "+p.getApellido(),p.getCarrera(),p.getCedula(), a, nombre_materias ,p.getMaterias().getNombreMaterias().length);
     }
 
     public void add_student(String nombre, String apellido, String carrera, String cedula) {
